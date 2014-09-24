@@ -6,9 +6,31 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body class='<%= controller.controller_name %>'>
+<body class="<%= controller_name %>">
+<div id="banner">
+  <%= image_tag("logo.png") %>
+  <%= @page_title || "Pragmatic Bookshelf" %>
+</div>
 
-<%= yield %>
+<div id="columns">
+  <div id="side">
+    <% if @cart %>
+        <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+        <%= render @cart %>
+        <% end %>
+    <% end %>
+
+    <ul>
+      <li><%= link_to 'Home', store_path %></a></li>
+      <li><a href="http://www..../faq">Questions</a></li>
+      <li><a href="http://www..../news">News</a></li>
+      <li><a href="http://www..../contact">Contact</a></li>
+    </ul>
+  </div>
+  <div id="main">
+    <%= yield %>
+  </div>
+</div>
 
 </body>
 </html>
