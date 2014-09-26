@@ -59,6 +59,7 @@ es:
       title:       "Carrito de la Compra"
       empty:       "Vaciar Carrito"
       checkout:    "Comprar"
+
 #END:cart
 
 #START:main

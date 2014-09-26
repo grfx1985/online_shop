@@ -29,6 +29,7 @@ pl:
       empty:       "Opróżnij Koszyk"
       checkout:    "Zakończ zakupy i zapłać"
 
+
   store:
     index:
       title_html:  "Twój Sklep Internetowy"

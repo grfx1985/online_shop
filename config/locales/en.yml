@@ -46,6 +46,7 @@ en:
       title:       "Your Cart"
       empty:       "Empty cart"
       checkout:    "Checkout"
+    
 #END:cart
 
 #START:main
