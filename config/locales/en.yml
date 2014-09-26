@@ -12,13 +12,13 @@ en:
 #END:main
 #END:layout
   number:
-    currency:
-      format:
-        unit:      "$"
-        precision: 2
-        separator: "."
-        delimiter: ","
-        format:    "%u%n"
+     currency:
+        format:
+          unit: ' zł'
+          delimiter: ','
+          separator: '.'
+          precision: 2
+          format: ' %n%u'
 #END:currency
 
 #START:errors
