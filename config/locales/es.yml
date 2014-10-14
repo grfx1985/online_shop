@@ -46,7 +46,7 @@ es:
 #START:layout
   layouts:
     application:
-      title:       "Publicaciones de Pragmatic"
+      title:       "Bracelet Shop"
       home:        "Inicio"
       questions:   "Preguntas"
       news:        "Noticias"
@@ -65,7 +65,7 @@ es:
 #START:main
   store:
     index:
-      title_html:  "Su Cat&aacute;logo de Pragmatic"
+      title_html:  "Bracelet Shop"
       add_html:    "A&ntilde;adir al Carrito"
 #END:main
 
@@ -80,6 +80,7 @@ es:
       pay_type:     "Forma de pago"
       pay_prompt_html: "Seleccione un m&eacute;todo de pago"
       submit:       "Realizar Pedido"
+      extra_info: "Extra Info"
 #END:checkout
 
 #START:flash

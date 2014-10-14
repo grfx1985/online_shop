@@ -1,4 +1,7 @@
 pl:
+
+
+
   number:
      currency:
         format:
@@ -9,11 +12,15 @@ pl:
           format: ' %n%u'
 
   errors:
+    messages:
+      blank: "Proszę wypełnić %{model}'s %{attribute}"
+      inclusion: "Proszę wybrać %{model}'s %{attribute} "
     template:
       body:        "Wystąpiły błędy z podświetlonymi polami:"
       header:       
-        one:       "Jeden błąd wstrzymuje %{model} przed zapisem"
-        other:     "%{count} błędy wstrzymują %{model} przed zapisem"
+        one:       "1 błąd wstrzymuje %{model} przed zapisem"
+        other:     "%{count} błędów wstrzymuje %{model} przed zapisem"
+
 
   layouts:
     application:
@@ -45,5 +52,8 @@ pl:
       pay_type:     "Płacę za pomocą"
       pay_prompt_html: "Prosze wybrać Metodę płatności"
       submit:       "Złóż Zamówienie"
+      extra_info: "Dodatkowe Informacje"
+
+
 
   thanks:          "Dziekujemy za zakupy z nami ! :)"

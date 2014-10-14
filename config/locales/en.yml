@@ -33,7 +33,7 @@ en:
 #START:layout
   layouts:
     application:
-      title:       "Pragmatic Bookshelf"
+      title:       "Bracelet Shop"
       home:        "Home"
       questions:   "Questions"
       news:        "News"
@@ -52,7 +52,7 @@ en:
 #START:main
   store:
     index:
-      title_html:  "Your Pragmatic Catalog"
+      title_html:  "Your Bracelet Catalog"
       add_html:    "Add to Cart"
 #END:main
 
@@ -67,6 +67,7 @@ en:
       pay_type:     "Pay with"
       pay_prompt_html: "Select a payment method"
       submit:       "Place Order"
+      extra_info: "Extra Info"
 #END:checkout
 
 #START:flash

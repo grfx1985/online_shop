@@ -63,7 +63,7 @@ class OrdersController < ApplicationController
         format.html { render action: 'edit' }
         format.json { render json: @order.errors, status: :unprocessable_entity }
       end
-    end
+    end 
   end
 
   # DELETE /orders/1
@@ -76,6 +76,7 @@ class OrdersController < ApplicationController
     end
   end
 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_order
@@ -84,7 +85,10 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:name, :address, :email, :pay_type)
+      params.require(:order).permit(:name, :address, :email, :pay_type, :extra)
     end
+
+
+
   #...
 end

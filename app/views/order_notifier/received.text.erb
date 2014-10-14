@@ -1,9 +1,41 @@
-Dear <%= @order.name %>
 
-Thank you for your recent order from The Pragmatic Store.
+Potwierdzenie Zamówienia
 
-You ordered the following items:
+Witaj, <%= @order.name %>, 
 
-<%= render @order.line_items -%>
+Bardzo dziękujemy za złożenie zamówienia w naszym sklepie.
 
-We'll send you a separate e-mail when your order ships.
+
+
+Zamówione zostały następujace przedmioty: <%= render @order.line_items -%>
+
+
+Wybrana została  <%= @order.pay_type %>  jako forma płatności. 
+Szczegóły podamy jak tylko otrzymamy Twoje zamówienie - Prosimy o cierpliwość :)
+
+Zamówienie zostanie zrealizowane po otrzymaniu płatności na nasze Konto.
+
+Wszystkie nasze branzoletki są zrobione ręcznie z dobrych jakościowo materiałów.
+
+Nie sprzedajemy tandety, bardzo zależy nam na zadowoleniu naszych klientów. :)
+
+
+Order Notifier
+
+
+Dear, <%= @order.name %>, 
+
+Thank you for your recent order in Our Store.
+
+
+
+You ordered the following items: <%= render @order.line_items -%>
+
+
+
+
+You have chosen the  <%= @order.pay_type %>  payment type. 
+
+We will Contact You with the payment details as soon as we acknowledge the order in place, and we will have the Items ready to ship. Please be patient :) 
+
+All our bracelets are made with quality materials. Done by hand.

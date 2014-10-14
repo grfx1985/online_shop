@@ -38,6 +38,12 @@
 <!-- END_HIGHLIGHT -->
     <%= f.email_field :email, size: 40 %>
   </div>
+    <div class="field">
+<!-- START_HIGHLIGHT -->
+    <%= f.label :extra, t('.extra_info') %><br>
+<!-- END_HIGHLIGHT -->
+    <%= f.text_area :extra, rows: 3, cols: 30 %>
+  </div>
   <div class="field">
 <!-- START_HIGHLIGHT -->
     <%= f.label :pay_type, t('.pay_type') %><br>
@@ -49,7 +55,7 @@
   </div>
   <div class="actions">
 <!-- START_HIGHLIGHT -->
-    <%= f.submit t('.submit') %>
+    <%= f.submit t('.submit')%>
 <!-- END_HIGHLIGHT -->
   </div>
 <% end %>
