@@ -37,9 +37,9 @@
 
       <ul>
         <li><a href="http://localhost:3000/"><%= t('.home') %></a></li><br>
-        <li><a href="http://localhost:3000/"><%= t('.questions') %></a></li><br>
-        <li><a href="http://localhost:3000/"><%= t('.news') %></a></li><br>
-        <li><a href="http://localhost:3000/"><%= t('.contact') %></a></li>
+<!--         <li><a href="http://localhost:3000/"><%= t('.questions') %></a></li><br>
+        <li><a href="http://localhost:3000/"><%= t('.news') %></a></li><br> -->
+        <li><%= link_to t('.contact'), new_contact_path  %></li>
          <br><li><%= button_to 'Admin Log In', login_path, method: :get   %></li></ul>
       </ul>
 
@@ -48,6 +48,7 @@
           <li><%= link_to 'Orders',   orders_path   %></li>
           <li><%= link_to 'Products', products_path %></li>
           <li><%= link_to 'Users',    users_path    %></li>
+          <li><%= link_to 'Contacts', contacts_path    %></li>
         </ul>
         <%= button_to 'Logout', logout_path, method: :delete   %>
       <% end %>

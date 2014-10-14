@@ -23,3 +23,4 @@ class OrderNotifier < ActionMailer::Base
     mail to: order.email, subject: 'Store Order Shipped'
   end
 end
+ 
