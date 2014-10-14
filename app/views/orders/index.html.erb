@@ -8,6 +8,7 @@
       <th>Email</th>
       <th>Pay type</th>
       <th>Extra Info</th>
+      <th>Shipped?</th>
       <th colspan="6"></th>
     </tr>
   </thead>
@@ -21,6 +22,7 @@
         <td><%= order.email %></td>
         <td><%= order.pay_type %></td>
         <td><%= order.extra %></td>
+        <td><%= order.shipped %></td>
         <td><%= link_to 'Show', order %></td>
         <td><%= link_to 'Edit', edit_order_path(order) %></td>
         <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
