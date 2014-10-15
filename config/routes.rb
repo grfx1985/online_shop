@@ -33,5 +33,9 @@ resources :contacts
     
     root 'store#index', as: 'store', via: :all
   end
+  put  "/paylane/payment",             to: "payments#pay",            as: 'make_payment'
+    put  "/paylane/authorize",           to: "payments#authorize",      as: 'make_authorization'
+    get  "/paylane/order/:id",           to: "payments#order_summary",  as: 'order_summary'
+    get  "/paylane/order/:id/callback",  to: "payments#order_callback", as: 'order_callback'
 end
 
