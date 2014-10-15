@@ -1,0 +1,57 @@
+<hr>
+
+<hr>
+
+<h1>Potwierdzenie Zamówienia</h1>
+
+<p>
+Witaj, <%= @order.name %>, 
+
+Bardzo dziękujemy za złożenie zamówienia w naszym sklepie.
+</p>
+<br>
+<p>
+Zamówione zostały następujace przedmioty: <%= render @order.line_items -%>
+
+</p>
+<br>
+<p>
+
+Wybrana została  <%= @order.pay_type %>  jako forma płatności. 
+Szczegóły podamy jak tylko otrzymamy Twoje zamówienie - Prosimy o cierpliwość :)
+
+Zamówienie zostanie zrealizowane po otrzymaniu płatności na nasze Konto.
+
+Wszystkie nasze branzoletki są zrobione ręcznie z dobrych jakościowo materiałów.
+
+Nie sprzedajemy tandety, bardzo zależy nam na zadowoleniu naszych klientów. :)
+
+</p>
+<hr>
+
+<hr>
+
+<h1>Order Notifier</h1>
+
+<p>
+Dear, <%= @order.name %>, 
+
+Thank you for your recent order in Our Store.
+</p>
+<br>
+<p>
+You ordered the following items: <%= render @order.line_items -%>
+
+</p>
+<br>
+<p>
+You have chosen the  <%= @order.pay_type %>  payment type. 
+
+We will Contact You with the payment details as soon as we acknowledge the order in place, and we will have the Items ready to ship. Please be patient :) 
+
+All our bracelets are made with quality materials. Done by hand.
+</p>
+
+<hr>
+
+<hr>
