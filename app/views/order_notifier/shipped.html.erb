@@ -1,8 +1,34 @@
+
+
+<hr>
+
+
+<hr>
+
+<h3>Twoje zamówienie zostało wysłane</h3>
+<p>
+Ten e-mail ma na celu Cię powiadomić o zmianie statusu Twojego zamówienia na  WYSŁANE.
+</p>
+<table>
+<tr><th colspan="1">Ilość</th><th>Opis</th><th>Cena</th></tr>
+<%= render @order.line_items -%>
+</table>
+
+<hr>
+
+
+<hr>
+
 <h3>Order Shipped</h3>
 <p>
 This is just to let you know that we've shipped your recent order:
 </p>
 <table>
-<tr><th colspan="2">Qty</th><th>Description</th></tr>
+<tr><th colspan="1">Qty</th><th>Description</th><th>Price</th></tr>
 <%= render @order.line_items -%>
 </table>
+
+<hr>
+
+
+<hr>

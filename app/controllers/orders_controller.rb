@@ -64,7 +64,12 @@ class OrdersController < ApplicationController
         format.html { render action: 'edit' }
         format.json { render json: @order.errors, status: :unprocessable_entity }
       end
-    end 
+
+    end
+
+    if  @order.update(shipped_params) && @order.shipped  == true
+      OrderNotifier.shipped(@order).deliver
+    end
   end
 
   # DELETE /orders/1
@@ -89,7 +94,9 @@ class OrdersController < ApplicationController
     def order_params
       params.require(:order).permit(:name, :address, :email, :pay_type, :extra, :shipped)
     end
-
+    def shipped_params
+      params.require(:order).permit(:shipped)
+    end
 
 
   #...
