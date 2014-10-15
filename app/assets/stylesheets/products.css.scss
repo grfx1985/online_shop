@@ -5,16 +5,18 @@
 .products {
   table {
     border-collapse: collapse;
+    
   }
 
-  table tr td {
+  table tr td  {
     padding: 5px;
     vertical-align: top;
   }
 
   .list_image {
     width: 60px;
-    height: 70px;
+    height: 60px;
+    
   }
 
   .list_description {

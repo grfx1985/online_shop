@@ -1,7 +1,7 @@
 class Product < ActiveRecord::Base
   has_many :line_items
   has_many :orders, through: :line_items
-  has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+  has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "http://a.dryicons.com/images/icon_sets/coquette_part_3_icons_set/png/128x128/pages_warning.png"
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
   before_destroy :ensure_not_referenced_by_any_line_item
