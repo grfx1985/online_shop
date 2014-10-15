@@ -1,5 +1,5 @@
 <!-- START:explanation -->
-<%= form_for(@order) do |f| %>
+<%= form_for(@order) do |f| %> 
   <% if @order.errors.any? %>
     <div id="error_explanation">
       <h2><%=raw t('errors.template.header', count: @order.errors.count,
@@ -30,7 +30,7 @@
   </div>
   <div class="field">
     <%= f.label :shipped, 'Shipped?' %><br>
-    <%= f.check_box :shipped, :disabled => true %>
+    <%= f.check_box :shipped, :disabled => session[:user_id].present? == false %>
   </div>
   <div class="field">
     <%= f.label :pay_type, t('.pay_type') %><br>
