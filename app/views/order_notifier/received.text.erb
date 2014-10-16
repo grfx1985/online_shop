@@ -12,7 +12,7 @@ Zamówione zostały następujace przedmioty: <%= render @order.line_items -%>
 
 Wybrana została  <%= @order.pay_type %>  jako forma płatności. 
 Szczegóły podamy jak tylko otrzymamy Twoje zamówienie - Prosimy o cierpliwość :)
-
+<%= @order.doc %> dołączymy przy wysyłce.
 Zamówienie zostanie zrealizowane po otrzymaniu płatności na nasze Konto.
 
 Wszystkie nasze branzoletki są zrobione ręcznie z dobrych jakościowo materiałów.
@@ -35,7 +35,7 @@ You ordered the following items: <%= render @order.line_items -%>
 
 
 You have chosen the  <%= @order.pay_type %>  payment type. 
-
+<%= @order.doc %> will be sent when shipped.
 We will Contact You with the payment details as soon as we acknowledge the order in place, and we will have the Items ready to ship. Please be patient :) 
 
 All our bracelets are made with quality materials. Done by hand.

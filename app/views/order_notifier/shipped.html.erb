@@ -7,7 +7,10 @@
 
 <h3>Twoje zamówienie zostało wysłane</h3>
 <p>
-Ten e-mail ma na celu Cię powiadomić o zmianie statusu Twojego zamówienia na  WYSŁANE.
+Ten e-mail ma na celu, powiadomić Ciebie o zmianie statusu zamówienia na  WYSŁANE.
+</p>
+<p>
+Dokument potwierdzający zakup: <%= @order.doc %>
 </p>
 <table>
 <tr><th colspan="1">Ilość</th><th>Opis</th><th>Cena</th></tr>
@@ -23,6 +26,7 @@ Ten e-mail ma na celu Cię powiadomić o zmianie statusu Twojego zamówienia na 
 <p>
 This is just to let you know that we've shipped your recent order:
 </p>
+Purchase document : <%= @order.doc %>
 <table>
 <tr><th colspan="1">Qty</th><th>Description</th><th>Price</th></tr>
 <%= render @order.line_items -%>

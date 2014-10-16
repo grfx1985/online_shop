@@ -51,8 +51,11 @@ pl:
       email:        "E-mail"
       pay_type:     "Płacę za pomocą"
       pay_prompt_html: "Prosze wybrać Metodę płatności"
+      pay_doc_html: "Wybierz rodzaj dokumentu"
+      pay_doc:  "Rodzaj dokumentu"
       submit:       "Złóż Zamówienie"
       extra_info: "Dodatkowe Informacje"
+      shipped: "Wysłane?"
 
 
 

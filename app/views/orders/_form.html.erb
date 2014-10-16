@@ -29,13 +29,18 @@
     <%= f.text_area :extra, rows: 3, cols: 30 %>
   </div>
   <div class="field">
-    <%= f.label :shipped, 'Shipped?' %><br>
+    <%= f.label :shipped, t('.shipped') %><br>
     <%= f.check_box :shipped, :disabled => session[:user_id].present? == false %>
   </div>
   <div class="field">
     <%= f.label :pay_type, t('.pay_type') %><br>
     <%= f.select :pay_type, Order::PAYMENT_TYPES,
                   prompt: t('.pay_prompt_html') %>
+  </div>
+  <div class="field">
+    <%= f.label :doc, t('.pay_doc') %><br>
+    <%= f.select :doc, Order::PAYMENT_DOC,
+                  prompt: t('.pay_doc_html') %>
   </div>
   <div class="actions">
     <%= f.submit t('.submit')%>
