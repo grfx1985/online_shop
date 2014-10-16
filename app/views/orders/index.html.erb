@@ -2,7 +2,7 @@
 
 <table>
   <thead>
-    <tr>
+    <tr class="list_description">
       <th>Name</th>
       <th>Address</th>
       <th>Email</th>
@@ -10,14 +10,14 @@
       <th>Pay document</th>
       <th>Extra Info</th>
       <th>Shipped?</th>
-      <th colspan="6"></th>
+      <th colspan="7"></th>
     </tr>
   </thead>
 
   <tbody>
 
     <% @orders.each do |order| %>
-      <tr>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
         <td><%= order.name %></td>
         <td><%= order.address %></td>
         <td><%= order.email %></td>
@@ -25,9 +25,10 @@
         <td><%= order.doc %></td>
         <td><%= order.extra %></td>
         <td><%= order.shipped %></td>
-        <td><%= link_to 'Show', order %></td>
-        <td><%= link_to 'Edit', edit_order_path(order) %></td>
-        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="list_actions">
+        <%= link_to 'Show', order %><br>
+        <%= link_to 'Edit', edit_order_path(order) %><br>
+        <%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
 
@@ -37,3 +38,4 @@
 <br>
 
 <%= link_to 'New Order', new_order_path %>
+

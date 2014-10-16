@@ -2,7 +2,7 @@
 
 <table>
   <thead>
-    <tr>
+    <tr class="list_description">
       <th>Title</th>
       <th>Message</th>
       <th>Email</th>
@@ -12,13 +12,14 @@
 
   <tbody>
     <% @contacts.each do |contact| %>
-      <tr>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
         <td><%= contact.title %></td>
         <td><%= contact.description %></td>
         <td><%= contact.email %></td>
-        <td><%= link_to 'Show', contact %></td>
-        <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
-        <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="list_actions">
+        <%= link_to 'Show', contact %><br>
+        <%= link_to 'Edit', edit_contact_path(contact) %><br>
+        <%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -27,3 +28,4 @@
 <br>
 
 <%= link_to 'New Contact', new_contact_path %>
+ 

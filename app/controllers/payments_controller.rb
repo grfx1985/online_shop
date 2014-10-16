@@ -4,7 +4,7 @@ include PaymentsHelper
 # Handles payments via Paylane vendor
 # @see http://devzone.paylane.com/api-guide/
 # @see http://devzone.paylane.com/api-guide/paylane-rest-client/
-class PaymentsController < FrontendController
+class PaymentsController < ApplicationController
 
   # Make payment request to Paylane
   def pay

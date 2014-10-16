@@ -7,22 +7,19 @@
 
 <table>
   <thead>
-    <tr>
+    <tr class="list_description">
       <th>Name</th>
-      <th></th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
 
   <tbody>
     <% @users.each do |user| %>
-      <tr>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
         <td><%= user.name %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete,
-        data: { confirm: 'Are you sure?' } %></td>
+        <td class="list_actions">
+        <%= link_to 'Show', user %><br>
+        <%= link_to 'Edit', edit_user_path(user) %><br>
+        <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
