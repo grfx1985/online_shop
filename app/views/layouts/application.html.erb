@@ -10,23 +10,8 @@
 </head>
 <!-- END:head -->
 <body class="<%= controller.controller_name %>">
-<!-- START:i18n -->
-  <div id="banner">
-<!-- START_HIGHLIGHT -->
-    <%= form_tag store_path, class: 'locale' do %>
-      <%= select_tag 'set_locale', 
-        options_for_select(LANGUAGES, I18n.locale.to_s),
-        onchange: 'this.form.submit()' %>
-      <%= submit_tag 'submit' %>
-      <%= javascript_tag "$('.locale input').hide()" %>
-    <% end %>
-<!-- END_HIGHLIGHT -->
-    <%= image_tag("logo.png") %>
-    <%= @page_title || t('.title') %>
-  </div>
-<!-- END:i18n -->
-  <div id="columns">
-    <div id="side">
+  <div class="app">
+    <div class="dashboard col-lg-4">
       <!-- START:hidden_div -->
       <% if @cart %>
         <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
@@ -34,14 +19,13 @@
         <% end %>
       <% end %>
     <!-- END:hidden_div -->
-
-      <ul>
-        <li><a href="http://localhost:3000/"><%= t('.home') %></a></li><br>
-<!--         <li><a href="http://localhost:3000/"><%= t('.questions') %></a></li><br>
-        <li><a href="http://localhost:3000/"><%= t('.news') %></a></li><br> -->
-        <li><%= link_to t('.contact'), new_contact_path  %></li>
-         <br><li><%= button_to 'Admin Log In', login_path, method: :get   %></li></ul>
-      </ul>
+      <nav>
+        <a class="btn btn-default" href="http://localhost:3000/"> <%= t('.home') %> </a>
+        <a class="btn btn-default" href="http://localhost:3000/"> <%= t('.questions') %> </a>
+        <a class="btn btn-default"href="http://localhost:3000/"> <%= t('.news') %> </a>
+        <%= link_to t('.contact'), new_contact_path, class:"btn btn-default"  %>
+        <a><%= button_to 'Admin Log In', login_path, method: :get , form_class: "btn btn-primary"%></a>
+      </nav>
 
       <% if session[:user_id] %>
         <ul>
@@ -54,7 +38,7 @@
         <%= button_to 'Logout', logout_path, method: :delete   %>
       <% end %>
     </div>
-    <div id="main">
+    <div class="content col-lg-8">
       <%= yield %>
     </div>
   </div>

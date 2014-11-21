@@ -14,17 +14,9 @@
  *= require_tree .
  */
 
-#banner {
-  background: #9c9;
-  padding: 10px;
-  border-bottom: 2px solid;
-  font: small-caps 40px/40px "Times New Roman", serif;
-  color: #282;
-  text-align: center;
-
-  img {
-    float: left;
-  }
+.app{
+  background: #484848;
+  display: inline-block;
 }
 
 #notice {
@@ -36,100 +28,51 @@
   font: bold smaller sans-serif;
 }
 
-#columns {
-  background: #141;
-
-  #main {
-    margin-left: 17em;
-    padding: 1em;
-    background: #cce6cc;
-  }
-
-//#START:side
-  #side {
-    float: left;
-    padding: 1em 2em;
-    width: 13em;
-    background: #141;
-
-/* START_HIGHLIGHT */
-    form, div {
-      display: inline;
-    }  
- 
-    input {
-      font-size: small;
-    }
-
-    #cart {
-      font-size: smaller;
-      color:     white;
-
-      table {
-        border-top:    1px dotted #595;
-        border-bottom: 1px dotted #595;
-        margin-bottom: 10px;
-      }
-    }
-
-/* END_HIGHLIGHT */
-    ul {
-      padding: 0;
-
-      li {
-        list-style: none;
-
-        a {
-          color: #bfb;
-          font-size: small;
-        }
-      }
-    }
-  }
-//#END:side
+ul{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  margin-bottom: 0px !important;
 }
 
-//#START:form
-.depot_form {
-  fieldset {
-    background: #efe;
-
-    legend {
-      color: #dfd;
-      background: #141;
-      font-family: sans-serif;
-      padding: 0.2em 1em;
-    }
-  }
-
-  form {
-    label {
-      width: 5em;
-      float: left;
-      text-align: right;
-      padding-top: 0.2em;
-      margin-right: 0.1em;
-      display: block;
-    }
-
-    select, textarea, input {
-      margin-left: 0.5em;
-    }
-
-    .submit {
-      margin-left: 4em;
-    }
-
-    br {
-      display: none
-    }
-  }
+.content{
+  background: #fff;
 }
-//#END:form
 
-/* START:i18n */
-.locale {
-  float: right;
-  margin: -0.25em 0.1em;
+.actions{
+  margin-top: 10px;
 }
-/* END:i18n */
+
+form.btn > div >  input {
+  background: transparent;
+  border: none;
+}
+
+nav{
+  margin-top: 30px;
+  display: inline-block;
+  width: 100%;
+}
+
+nav a{
+  display: inline-block;
+  color: #515e68 !important;
+  text-decoration: none;
+  margin-bottom: 3px !important;
+}
+
+.content{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 0px !important;
+}
+
+.dashboard{
+  background: #484848;
+  height: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  float: left;
+}
+
+

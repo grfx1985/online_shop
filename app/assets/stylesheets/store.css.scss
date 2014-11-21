@@ -7,47 +7,57 @@
     margin: 0;
     padding-bottom: 0.5em;
     font: 150% sans-serif;
-    color: #226;
-    border-bottom: 3px dotted #77d;
+    color: #333;
+    //border-bottom: 3px dotted #77d;
   }
 
   /* An entry in the store catalog */
   .entry {
     overflow: auto;
-    margin-top: 1em;
-    border-bottom: 1px dotted #77d;
+    border-bottom: 1px solid #c6c6c5;
     min-height: 100px;
+    padding-top: 10px;
 
     img {
-      width: 80px;
+      width: 150px;
+      height: 150px;
       margin-right: 5px;
       margin-bottom: 5px;
-      position: absolute;
+      position: relative;
+      border: solid 6px #929aa8;
+      border-radius: 4px;
     }
 
     h3 {
-      font-size: 120%;
+      font-size: 20px;
       font-family: sans-serif;
-      margin-left: 100px;
-      margin-top: 0;
-      margin-bottom: 2px;
-      color: #227;
-      
+      margin-top: 0px; 
+      margin-left: 10px;
+      color: #000;     
     }
 
-    p, div.price_line {
-      margin-left: 100px;
-      margin-top: 0.5em;
-      margin-bottom: 0.8em;
-      form, div {
-        display: inline;
-      }
+    p{
+      font-size: 16px;
+      line-height: 1.4em;
+      margin-left: 10px;
+    }
+
+    footer{
+      display: inline-block;
+    }
+
+    footer form{
+      float: right;
+      margin-bottom: 10px;
     }
 
     .price {
-      color: #44a;
+      color: #515e68;
       font-weight: bold;
-      margin-right: 3em;
+      position: relative;
+      font-size: 24px;
+      float: left;
+      top: 14px;
     }
   }
 }

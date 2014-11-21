@@ -1,21 +1,23 @@
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
-<!-- START_HIGHLIGHT -->
-<h1><%= t('.title_html') %></h1>
-<!-- END_HIGHLIGHT -->
+
 <% cache ['store', Product.latest] do %>
   <% @products.each do |product| %>
     <% cache ['entry', product] do %>
       <div class="entry">
-        <%= link_to image_tag(product.image.url(:thumb)), product.image.url %>
-        <h3><%= product.title %></h3>
-        <p><%= sanitize(product.description) %></p>
-        <div class="price_line">
-          <span class="price"><%= number_to_currency(product.price) %></span>
-<!-- START_HIGHLIGHT -->
-          <%= button_to t('.add_html'), line_items_path(product_id: product),remote: true %>
+        <div class="col-lg-2" style="padding:0px;">
+          <%= link_to image_tag(product.image.url(:thumb)), product.image.url %>
         </div>
+        <div class="col-lg-10">
+          <h3><%= product.title %></h3>
+          <p><%= sanitize(product.description) %></p>
+
+        </div>
+        <footer class="col-lg-12">
+          <span class="price"><%= number_to_currency(product.price) %></span>
+          <%= button_to t('.add_html'), line_items_path(product_id: product),remote: true, form_class: "btn btn-success" %>
+        </footer>
       </div>
     <% end %>
   <% end %>

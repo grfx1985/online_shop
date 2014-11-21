@@ -1,21 +1,25 @@
 <!-- START_HIGHLIGHT -->
-<h2><%= t('.title') %></h2>
+<header>
+	<h2>Koszyk</h2>
+</header>
 <!-- END_HIGHLIGHT -->
-<table>
-  <%= render(cart.line_items) %>
+<section class="line-items"> 
+  <ul>
+  	<%= render(cart.line_items) %>
+  </ul>
+  <div class="price-counter info">
+    <span class="cost">Koszt</span>
+    <span class="total_cell"><%= number_to_currency(cart.total_price) %></span>
+  </div>
 
-  <tr class="total_line">
-    <td colspan="2">Total</td>
-    <td class="total_cell"><%= number_to_currency(cart.total_price) %></td>
-  </tr>
-
-</table>
+</section>
 
 <!-- START_HIGHLIGHT -->
 
 <!-- END_HIGHLIGHT -->
 <!-- START_HIGHLIGHT -->
-<%= button_to t('.empty'), cart, method: :delete,     data: { confirm: 'Are you sure?' } %>
+<div class="actions">
+<%= button_to t('.empty'), cart, method: :delete, form_class: "btn btn-danger", data: { confirm: 'Are you sure?' } %>
+<%= button_to t('.checkout'), new_order_path, method: :get , form_class: "btn btn-success",    data: { confirm: 'Are you sure?' } %>
+</div>
 
-
-<%= button_to t('.checkout'), new_order_path, method: :get ,     data: { confirm: 'Are you sure?' } %>
