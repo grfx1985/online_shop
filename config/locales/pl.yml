@@ -1,7 +1,4 @@
 pl:
-
-
-
   number:
      currency:
         format:
@@ -10,6 +7,26 @@ pl:
           separator: '.'
           precision: 2
           format: ' %n%u'
+
+  date:
+    month_names:
+      -
+      - Styczeń
+      - Luty
+      - Marzec
+      - Kwiecień
+      - Maj
+      - Czerwiec
+      - Lipiec
+      - Sierpień
+      - Wrzesień
+      - Październik
+      - Listopad
+      - Grudzień
+    order:
+      - :day
+      - :month
+      - :year
 
   errors:
     messages:
@@ -56,7 +73,7 @@ pl:
       submit:       "Złóż Zamówienie"
       extra_info: "Dodatkowe Informacje"
       shipped: "Wysłane?"
-
+      delivery_time: "Czas Dostawy?"
 
 
   thanks:          "Dziekujemy za zakupy z nami ! :)"

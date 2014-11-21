@@ -23,6 +23,26 @@ es:
           separator: '.'
           precision: 2
           format: ' %n%u'
+
+  date:
+    month_names:
+    -
+    - Enero
+    - Febrero
+    - Marzo
+    - Abril
+    - Mayo
+    - Junio
+    - Julio
+    - Agosto
+    - Septiembre
+    - Octubre
+    - Noviembre
+    - Diciembre
+    order:
+      - :day
+      - :month
+      - :year
 #END:currency
 
 #START:model
@@ -84,6 +104,8 @@ es:
       submit:       "Realizar Pedido"
       extra_info: "Extra Info"
       shipped: "Enviado?"
+      delivery: "El tiempo de entrega?"
+
 #END:checkout
 
 #START:flash

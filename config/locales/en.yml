@@ -19,6 +19,12 @@ en:
           separator: '.'
           precision: 2
           format: ' %n%u'
+
+  date:
+    order:
+      - :day
+      - :month
+      - :year
 #END:currency
 
 #START:errors
@@ -71,6 +77,8 @@ en:
       submit:       "Place Order"
       extra_info: "Extra Info"
       shipped: "Shipped?"
+      delivery: "Delivery Time?"
+
 #END:checkout
 
 #START:flash
