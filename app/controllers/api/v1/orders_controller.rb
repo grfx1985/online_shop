@@ -12,7 +12,9 @@ module Api
       end
       
       def create
-        respond_with Order.create(params[:order])
+        o = o_p.except(:delivery_time)
+        o[:delivery_time] = Time.at(o_p[:delivery_time].to_i)
+        respond_with Order.create(o)
       end
       
       def update
@@ -21,6 +23,10 @@ module Api
       
       def destroy
         respond_with Order.destroy(params[:id])
+      end
+      private
+      def o_p
+        params.require(:order).permit(:name,:address,:email,:pay_type,:extra,:shipped,:doc,:delivery_time)
       end
     end
   end
