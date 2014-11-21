@@ -15,11 +15,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-$(document).ready(function (argument) {
-	$('.boughtItem').click(function () {
-		if($(this).find('.removeItem').hasClass('animated')){
-			$(this)add
-		}
-	});
-});
