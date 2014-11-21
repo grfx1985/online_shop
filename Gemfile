@@ -45,3 +45,4 @@ gem 'paperclip'
 
 
 gem 'bcrypt'
+gem 'pry'
