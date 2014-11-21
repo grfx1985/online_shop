@@ -12,7 +12,7 @@ module Api
       end
       
       def create
-        respond_with LineItem.create(params[:line_item])
+        respond_with LineItem.create(l_p)
       end
       
       def update
@@ -21,6 +21,10 @@ module Api
       
       def destroy
         respond_with LineItem.destroy(params[:id])
+      end
+      private
+      def l_p
+        params.require(:line_item).permit(:product_id)
       end
     end
   end
