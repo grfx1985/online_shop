@@ -1,10 +1,13 @@
 <% if line_item == @current_item %>
-<span id="current_item"></span>
-<% else %>
 <li class="boughtItem">
-<% end %>
-
 	<span class="itemCount"><%= line_item.quantity %><small>&times;</small></span>
 	<span class="itemTitle"><%= line_item.product.title %></span>
 	<span class="itemPrice"><%= number_to_currency(line_item.total_price) %></span>
 </li>
+<% else %>
+<li class="boughtItem">
+	<span class="itemCount"><%= line_item.quantity %><small>&times;</small></span>
+	<span class="itemTitle"><%= line_item.product.title %></span>
+	<span class="itemPrice"><%= number_to_currency(line_item.total_price) %></span>
+</li>
+<% end %>

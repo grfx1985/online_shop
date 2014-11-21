@@ -1,8 +1,9 @@
-$('#notice').hide();
+//$('#notice').hide();
 
-if ($('#cart tr').length == 1) { $('#cart').show('blind', 1000); }
+if ($('#cart line-items ul li').length === 0) { 
+	$('#cart').html("<%= escape_javascript render(@cart) %>").find('.boughtItem').addClass("tada animated");
+}else{
+	$('#cart').html("<%= escape_javascript render(@cart) %>").find('.boughtItem').addClass("tada animated");	
+}
 
-$('#cart').html("<%= escape_javascript render(@cart) %>");
 
-$('#current_item').css({'background-color':'#88ff88'}).
- animate({'background-color':'#114411'}, 1000);
