@@ -1,0 +1,95 @@
+// Place all the styles related to the Carts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.line-items{
+	width:  100%;
+	font-size: 20px;
+}
+
+.price-counter, ul {
+	display: inline-block;
+	width:  100%;
+	line-height: 1.5em;
+	padding: 10px;
+}
+
+.price-counter{
+	background: #515e68;
+	color: #fff;
+}
+
+span:first-child{
+	display: inline-block; 
+	float: left;
+}
+
+span:last-child{
+	display: inline-block; 
+	float: right;
+	font-weight: bold;
+}
+
+ul{ padding: 0px; }
+
+ul li{
+	font-size:  20px;
+	line-height: 1.8em;
+	border-bottom: solid 1px #c6c6c5; 
+	cursor: pointer;
+	transition: all .2s;
+	position: relative;
+	z-index: 1;
+	padding: 5px;
+	background: #fff;
+}
+
+ul li:hover{
+	background: #a3b4c2;
+	color: #fff;
+
+}
+
+li:nth-child(odd){
+	background: #f8f8f8;
+}
+
+.itemCount{
+	font-size: 14px;
+	font-weight: bold;
+	margin-right:  10px;
+}
+
+.itemPrice{
+	font-weight: bold;
+}
+
+.itemTitle{
+	font-size: 16px;
+}
+
+
+.removeItem{
+	width: 39px;
+	height: 39px;
+	border-radius: 0px;
+	z-index: 2;
+	outline: none;
+	display: none;
+}
+
+.removeItem span{
+	font-size: 10px;
+	color: #fff;
+	font-weight: normal;
+}
+
+header{
+	/* background: #929aa8;*/
+	color: #fff;
+	padding: 10px 0px; }
+
+header h2{
+	padding: 0px 10px;
+}

@@ -1,0 +1,13 @@
+<h1>Welcome</h1><br>
+<div>
+<ul class="list_description">It's <%= Time.now.to_s[0..15] %></ul>
+<hr>
+<ul class="list_description">We have <%= pluralize(@total_orders, "placed order") %>.</ul>
+<ul><%= link_to 'List Orders', orders_path %></ul>
+</ul>
+<hr>
+<ul class="list_description">We have <%= pluralize(@total_contacts, "contact request") %>.
+
+</ul>
+<ul><%= link_to 'List Messages', contacts_path %></ul>
+</div>

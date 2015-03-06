@@ -1,0 +1,52 @@
+<!-- START:explanation -->
+<%= form_for(@order) do |f| %> 
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%=raw t('errors.template.header', count: @order.errors.count,
+        model: t('activerecord.models.order')) %>.</h2>
+      <p><%= t('errors.template.body') %></p>
+      <ul>
+      <% @order.errors.full_messages.each do |msg| %>
+        <li><%=raw msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :name, t('.name') %><br>
+    <%= f.text_field :name, size: 40 %>
+  </div>
+  <div class="field">
+    <%= f.label :address, t('.address_html') %><br>
+    <%= f.text_area :address, rows: 3, cols: 40 %>
+  </div>
+  <div class="field">
+    <%= f.label :email, t('.email') %><br>
+    <%= f.email_field :email, size: 40 %>
+  </div>
+    <div class="field">
+    <%= f.label :extra, t('.extra_info') %><br>
+    <%= f.text_area :extra, rows: 3, cols: 30 %>
+  </div>
+  <div class="field">
+    <%= f.label :shipped, t('.shipped') %><br>
+    <%= f.check_box :shipped, :disabled => session[:user_id].present? == false %>
+  </div>
+    <div class="field">
+    <%= f.label :delivery_time, t('.delivery_time') %><br>
+    <%= f.datetime_select :delivery_time, default: 3.days.from_now %>
+  </div>
+  <div class="field">
+    <%= f.label :pay_type, t('.pay_type') %><br>
+    <%= f.select :pay_type, Order::PAYMENT_TYPES,
+                  prompt: t('.pay_prompt_html') %>
+  </div>
+  <div class="field">
+    <%= f.label :doc, t('.pay_doc') %><br>
+    <%= f.select :doc, Order::PAYMENT_DOC,
+                  prompt: t('.pay_doc_html') %>
+  </div>
+  <div class="btn btn-success btn-lg active actions">
+    <%= f.submit t('.submit')%>
+  </div>
+<% end %>

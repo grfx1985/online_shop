@@ -1,0 +1,27 @@
+
+
+Twoje zamówienie zostało wysłane
+
+Ten e-mail ma na celu Cię powiadomić o zmianie statusu Twojego zamówienia na  WYSŁANE.
+
+Dokument potwierdzający zakup: <%= @order.doc %>
+
+<% @order.line_items.each do |line_item| %>
+	<%= render partial: 'line_items/line_item', line_item: line_item %>
+<% end %>
+
+Order Shipped
+
+This is just to let you know that we've shipped your recent order:
+
+Purchase document : <%= @order.doc %>
+
+
+<% @order.line_items.each do |line_item| %>
+	<%= render partial: 'line_items/line_item', line_item: line_item %>
+<% end %>
+
+
+
+
+

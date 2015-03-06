@@ -1,0 +1,86 @@
+#START:layout
+#START:main
+#START:cart
+#START:currency
+#START:checkout
+#START:flash
+en:
+
+#END:cart
+#END:checkout
+#END:flash
+#END:main
+#END:layout
+  number:
+     currency:
+        format:
+          unit: ' zł'
+          delimiter: ','
+          separator: '.'
+          precision: 2
+          format: ' %n%u'
+
+  date:
+    order:
+      - :day
+      - :month
+      - :year
+#END:currency
+
+#START:errors
+  errors:
+    template:
+      body:        "There were problems with the following fields:"
+      header:       
+        one:       "1 error prohibited this %{model} from being saved"
+        other:     "%{count} errors prohibited this %{model} from being saved"
+#END:errors
+
+#START:layout
+  layouts:
+    application:
+      title:       "Bracelet Shop"
+      home:        "Home"
+      questions:   "Questions"
+      news:        "News"
+      contact:     "Contact"
+#END:layout
+
+#START:cart
+  carts:
+    cart:
+      title:       "Your Cart"
+      empty:       "Empty cart"
+      checkout:    "Checkout"
+    
+#END:cart
+
+#START:main
+  store:
+    index:
+      title_html:  "Your Bracelet Catalog"
+      add_html:    "Add to Cart"
+#END:main
+
+#START:checkout
+  orders:
+    new:
+      legend:       "Please Enter Your Details"
+    form:
+      name:         "Name"
+      address_html: "Address"
+      email:        "E-mail"
+      pay_type:     "Pay with"
+      pay_prompt_html: "Select a payment method"
+      pay_doc_html: "Select a purchase document"
+      pay_doc:  "Select document"
+      submit:       "Place Order"
+      extra_info: "Extra Info"
+      shipped: "Shipped?"
+      delivery: "Delivery Time?"
+
+#END:checkout
+
+#START:flash
+  thanks:          "Thank you for your order"
+#END:flash

@@ -1,0 +1,31 @@
+<h1>Listing contacts</h1>
+
+<table>
+  <thead>
+    <tr class="list_description">
+      <th>Title</th>
+      <th>Message</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contacts.each do |contact| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+        <td><%= contact.title %></td>
+        <td><%= contact.description %></td>
+        <td><%= contact.email %></td>
+        <td class="list_actions">
+        <%= link_to 'Show', contact %><br>
+        <%= link_to 'Edit', edit_contact_path(contact) %><br>
+        <%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Contact', new_contact_path %>
+ 

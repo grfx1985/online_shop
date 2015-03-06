@@ -1,0 +1,79 @@
+pl:
+  number:
+     currency:
+        format:
+          unit: ' zł'
+          delimiter: ','
+          separator: '.'
+          precision: 2
+          format: ' %n%u'
+
+  date:
+    month_names:
+      -
+      - Styczeń
+      - Luty
+      - Marzec
+      - Kwiecień
+      - Maj
+      - Czerwiec
+      - Lipiec
+      - Sierpień
+      - Wrzesień
+      - Październik
+      - Listopad
+      - Grudzień
+    order:
+      - :day
+      - :month
+      - :year
+
+  errors:
+    messages:
+      blank: "Proszę wypełnić %{model}'s %{attribute}"
+      inclusion: "Proszę wybrać %{model}'s %{attribute} "
+    template:
+      body:        "Wystąpiły błędy z podświetlonymi polami:"
+      header:       
+        one:       "1 błąd wstrzymuje %{model} przed zapisem"
+        other:     "%{count} błędów wstrzymuje %{model} przed zapisem"
+
+
+  layouts:
+    application:
+      title:       "Sklep Internetowy"
+      home:        "Strona Domowa"
+      questions:   "FAQ"
+      news:        "Wiadomości"
+      contact:     "Kontakt z nami"
+
+  carts:
+    cart:
+      title:       "Twój Koszyk"
+      empty:       "Opróżnij Koszyk"
+      checkout:    "Zakończ zakupy i zapłać"
+
+
+  store:
+    index:
+      title_html:  "Twój Sklep Internetowy"
+      add_html:    "Dodaj do Koszyka"
+
+  orders:
+    new:
+      legend:       "Prosimy o podanie danych kontaktowych"
+    form:
+      name:         "Imię i Nazwisko"
+      address_html: "Adres"
+      email:        "E-mail"
+      pay_type:     "Płacę za pomocą"
+      pay_prompt_html: "Prosze wybrać Metodę płatności"
+      pay_doc_html: "Wybierz rodzaj dokumentu"
+      pay_doc:  "Rodzaj dokumentu"
+      submit:       "Złóż Zamówienie"
+      extra_info: "Dodatkowe Informacje"
+      shipped: "Wysłane?"
+      delivery_time: "Czas Dostawy?"
+
+
+  thanks:          "Dziekujemy za zakupy z nami ! :)"

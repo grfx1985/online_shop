@@ -1,0 +1,44 @@
+
+
+<hr>
+
+
+<hr>
+
+<h3>Twoje zamówienie zostało wysłane</h3>
+<p>
+Ten e-mail ma na celu, powiadomić Ciebie o zmianie statusu zamówienia na  WYSŁANE.
+</p>
+<p>
+Dokument potwierdzający zakup: <%= @order.doc %>
+</p>
+<table>
+<tr><th colspan="1">Ilość</th><th>Opis</th><th>Cena</th></tr>
+<% @order.line_items.each do |line_item| %>
+	<%= render partial: 'line_items/line_item', line_item: line_item %>
+<% end %>
+
+</table>
+
+<hr>
+
+
+<hr>
+
+<h3>Order Shipped</h3>
+<p>
+This is just to let you know that we've shipped your recent order:
+</p>
+Purchase document : <%= @order.doc %>
+<table>
+<tr><th colspan="1">Qty</th><th>Description</th><th>Price</th></tr>
+
+<% @order.line_items.each do |line_item| %>
+	<%= render partial: 'line_items/line_item', line_item: line_item %>
+<% end %>
+</table>
+
+<hr>
+
+
+<hr>
