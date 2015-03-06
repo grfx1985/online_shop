@@ -11,10 +11,13 @@ Bardzo dziękujemy za złożenie zamówienia w naszym sklepie.
 </p>
 <br>
 <p>
+
 Zamówione zostały następujace przedmioty: 
 <% @order.line_items.each do |line_item| %>
 	<%= render partial: 'line_items/line_item', locals: { line_item: line_item } %>
 <% end %>
+
+
 </p>
 <br>
 <p>
@@ -43,6 +46,9 @@ You ordered the following items:
 <% @order.line_items.each do |line_item| %>
 	<%= render partial: 'line_items/line_item', locals: { line_item: line_item } %>
 <% end %>
+
+
+
 </p>
 <br>
 <p>

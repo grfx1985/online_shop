@@ -7,8 +7,10 @@ Ten e-mail ma na celu Cię powiadomić o zmianie statusu Twojego zamówienia na 
 Dokument potwierdzający zakup: <%= @order.doc %>
 
 <% @order.line_items.each do |line_item| %>
-	<%= render partial: 'line_items/line_item', line_item: line_item %>
+	<%= render partial: 'line_items/line_item', locals: { line_item: line_item } %>
 <% end %>
+
+
 
 Order Shipped
 
@@ -18,8 +20,10 @@ Purchase document : <%= @order.doc %>
 
 
 <% @order.line_items.each do |line_item| %>
-	<%= render partial: 'line_items/line_item', line_item: line_item %>
+	<%= render partial: 'line_items/line_item', locals: { line_item: line_item } %>
 <% end %>
+
+
 
 
 

@@ -14,9 +14,13 @@ Dokument potwierdzający zakup: <%= @order.doc %>
 </p>
 <table>
 <tr><th colspan="1">Ilość</th><th>Opis</th><th>Cena</th></tr>
+
 <% @order.line_items.each do |line_item| %>
-	<%= render partial: 'line_items/line_item', line_item: line_item %>
+	<%= render partial: 'line_items/line_item', locals: { line_item: line_item } %>
 <% end %>
+
+
+
 
 </table>
 
@@ -33,9 +37,13 @@ Purchase document : <%= @order.doc %>
 <table>
 <tr><th colspan="1">Qty</th><th>Description</th><th>Price</th></tr>
 
+
 <% @order.line_items.each do |line_item| %>
-	<%= render partial: 'line_items/line_item', line_item: line_item %>
+	<%= render partial: 'line_items/line_item', locals: { line_item: line_item } %>
 <% end %>
+
+
+
 </table>
 
 <hr>

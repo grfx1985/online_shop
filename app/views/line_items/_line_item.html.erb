@@ -1,7 +1,10 @@
+
 <li class="boughtItem">
 	<span class="itemCount"><%= line_item.quantity %><small>&times;</small></span>
 	<span class="itemTitle"><%= line_item.product.title %></span>
 	<span class="itemPrice"><%= number_to_currency(line_item.total_price) %></span>
 </li>
 
+
 <%= link_to '-', line_item_path(line_item.id),remote: true, method: :delete, class: "btn btn-success" %>
+

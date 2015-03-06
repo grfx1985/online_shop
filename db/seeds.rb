@@ -42,9 +42,12 @@ Product.create!(title: 'Rails Test Prescriptions',
         including Cucumber, Shoulda, Machinist, Mocha, and Rcov.
       </p>},
     image_url: 'rtp.jpg',
+
     price: 34.95)
 
 
 User.create(name: 'User', password: 'password', password_confirmation: 'password')
 User.create(name: 'User1', password: 'password', password_confirmation: 'password')
 User.create(name: 'User2', password: 'password', password_confirmation: 'password')
+
+

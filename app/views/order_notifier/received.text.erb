@@ -14,6 +14,9 @@ Zamówione zostały następujace przedmioty:
 <% end %>
 
 
+
+
+
 Wybrana została  <%= @order.pay_type %>  jako forma płatności. 
 Szczegóły podamy jak tylko otrzymamy Twoje zamówienie - Prosimy o cierpliwość :)
 <%= @order.doc %> dołączymy przy wysyłce.
@@ -33,11 +36,15 @@ Thank you for your recent order in Our Store.
 
 
 
+
 You ordered the following items: 
 
 <% @order.line_items.each do |line_item| %>
 	<%= render partial: 'line_items/line_item', locals: { line_item: line_item } %>
 <% end %>
+
+
+
 
 
 

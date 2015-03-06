@@ -7,12 +7,16 @@
     <% cache ['entry', product] do %>
       <div class="entry">
         <div class="col-lg-2 hidden-sm hidden-xs" style="padding:0px; float:right">
+
+
           <%= link_to image_tag(product.image.url(:thumb)), product.image.url %>
         </div>
         <div class="col-lg-10">
           <h3><%= product.title %></h3>
           <p><%= sanitize(product.description) %></p>
+
           <p style="font-size:10px"><%= link_to 'Show product', product_path(product)%></p>
+
         </div>
         <footer class="col-lg-12">
           <span class="price"><%= number_to_currency(product.price) %></span>

@@ -11,7 +11,9 @@
 <!-- END:head -->
 <body class="<%= controller.controller_name %>">
   <div class="app">
+
     <div class="dashboard col-lg-4 col-md-4 col-xs-6">
+
       <!-- START:hidden_div -->
       <% if @cart %>
         <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
@@ -38,7 +40,9 @@
         <%= button_to 'Logout', logout_path, method: :delete   %>
       <% end %>
     </div>
+
     <div class="content col-lg-7 col-lg-offset-1 content col-md-7 col-xs-6">
+
       <%= yield %>
     </div>
   </div>
